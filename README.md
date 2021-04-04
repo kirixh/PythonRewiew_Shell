@@ -32,5 +32,5 @@ exit - Stop the program.
 ## How to install and run in PyCharm
 
 1) Open or create a project
-2) run in Terminal: git clone https://github.com/kirixh/PythonRewiew_Shell.git
+2) run in Terminal: git clone https://github.com/kirixh/PythonRewiew_Shell.git -b dev
 3) Open main.py -> click RMB -> Run 'main'
