@@ -1,11 +1,12 @@
-from Commands_Sources.Ls import Ls
-from Commands_Sources.Pwd import Pwd
 from Commands_Sources.Cd import Cd
 from Commands_Sources.Cp import Cp
+from Commands_Sources.Ls import Ls
+from Commands_Sources.Mkdir import Mkdir
 from Commands_Sources.Mv import Mv
+from Commands_Sources.Pwd import Pwd
 from Commands_Sources.Rm import Rm
 from Commands_Sources.Rmdir import Rmdir
-from Commands_Sources.Mkdir import Mkdir
+
 print("Hello! This is shell on python. Possible commands:\n"
       "ls - Output a list of files and directories for the current directory.\n"
       "pwd - Print the full path for the current directory.\n"
@@ -34,4 +35,3 @@ while True:
         commands[cm[0]].command(*cm[1:])
     except Exception as exc:
         print(exc)
-

@@ -1,10 +1,10 @@
 import os
 
-from abstract_commands import Commands
+from abstract_commands import Command
 from shutil import copy
 
 
-class Cp(Commands):
+class Cp(Command):
     def __init__(self):
         super().__init__()
 
@@ -16,4 +16,9 @@ class Cp(Commands):
         """
         self.get_path()  # обновляем текущий путь
         # делаем из относительных путей абсолютные и копируем
-        copy(os.path.abspath(args[0]), os.path.abspath(args[1]))
+        try:
+            copy(os.path.abspath(args[0]), os.path.abspath(args[1]))
+        except FileNotFoundError:
+            print("File not found!")
+        except IsADirectoryError:
+            print("You are trying to copy directory!")

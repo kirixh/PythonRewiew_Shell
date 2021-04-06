@@ -1,9 +1,9 @@
 import os
 
-from abstract_commands import Commands
+from abstract_commands import Command
 
 
-class Rm(Commands):
+class Rm(Command):
     def __init__(self):
         super().__init__()
 
@@ -13,4 +13,7 @@ class Rm(Commands):
         :param args: кортеж, args[0] - имя удаляемого файла.
         """
         self.get_path()  # обновляем текущий путь
-        os.remove(args[0])
+        try:
+            os.remove(args[0])
+        except FileNotFoundError:
+            print("File not found!")

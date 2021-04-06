@@ -1,9 +1,9 @@
 import os
 
-from abstract_commands import Commands
+from abstract_commands import Command
 
 
-class Cd(Commands):
+class Cd(Command):
     def __init__(self):
         super().__init__()
 
@@ -12,5 +12,10 @@ class Cd(Commands):
         Меняет текущую директорию на args[0]
         :param args: кортеж, args[0] - новый адрес.
         """
-        os.chdir(args[0])
+        try:
+            os.chdir(args[0])
+        except FileNotFoundError:
+            print("Wrong path!")
+        except NotADirectoryError:
+            print("It's not a directory!")
         self.get_path()  # обновляем текущий путь

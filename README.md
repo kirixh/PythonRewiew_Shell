@@ -2,23 +2,26 @@
 
 ### **Possible commands:**
 
-ls - Output a list of files and directories for the current directory.
+`ls` - Output a list of files and directories for the current directory.
 
-pwd - Print the full path for the current directory.
+`pwd` - Print the full path for the current directory.
 
-cd path - Change current directory by a relative or absolute path.
+`cd [path]` - Change current directory by a relative or absolute path.
 
-cp filename1 filename2 - Copy filename1 into filename2.
+`cp [filename1] [filename2]` - Copy [filename1] into [filename2]. Files with the same name are overwritten.
 
-mv filename1 filename2 - Move the filename1 to filename2.
+`mv [filename1] [filename2]` - Move the [filename1] to [filename2].
+If the directories match, they are renamed.
+Files with the same name are overwritten.
+If the path to the directory is specified as args[1], the name of the moved file will not change.
 
-rm filename - Delete the file.
+`rm [filename]` - Delete the file.
 
-rmdir dirname - Delete the directory if it's empty.
+`rmdir [dirname]` - Delete the directory if it's empty.
 
-mkdir dirname - Make directory if it didn't exist.
+`mkdir [dirname]` - Make directory if it didn't exist.
 
-exit - Stop the program.
+`exit` - Stop the program.
 
 ## Examples of using the program
 
@@ -32,5 +35,5 @@ exit - Stop the program.
 ## How to install and run in PyCharm
 
 1) Open or create a project
-2) run in Terminal: git clone https://github.com/kirixh/PythonRewiew_Shell.git -b dev
+2) run in Terminal: `git clone https://github.com/kirixh/PythonRewiew_Shell.git -b dev`
 3) Open main.py -> click RMB -> Run 'main'

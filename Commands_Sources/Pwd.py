@@ -1,7 +1,7 @@
-from abstract_commands import Commands
+from abstract_commands import Command
 
 
-class Pwd(Commands):
+class Pwd(Command):
     def __init__(self):
         super().__init__()
 
