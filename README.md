@@ -13,7 +13,7 @@
 `mv [filename1] [filename2]` - Move the [filename1] to [filename2].
 If the directories match, they are renamed.
 Files with the same name are overwritten.
-If the path to the directory is specified as args[1], the name of the moved file will not change.
+If the path to the directory is specified as [filename2], the name of the moved file will not change.
 
 `rm [filename]` - Delete the file.
 
