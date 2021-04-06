@@ -1,9 +1,9 @@
 import os
 
-from abstract_commands import Commands
+from abstract_commands import Command
 
 
-class Mv(Commands):
+class Mv(Command):
     def __init__(self):
         super().__init__()
 
@@ -16,9 +16,13 @@ class Mv(Commands):
         :param args: кортеж, args[0] - что перемещаем, args[1] - куда.
         """
         self.get_path()  # обновляем текущий путь
-        if os.path.isdir(args[1]):  # если args[1] - путь до директории
-            # дописываем к пути имя исходного файла
-            os.replace(args[0], os.path.join(args[1], os.path.split(args[0])[1]))
-        else:
-            os.replace(args[0], args[1])
-
+        try:
+            if os.path.isdir(args[1]):  # если args[1] - путь до директории
+                # дописываем к пути имя исходного файла
+                os.replace(args[0], os.path.join(args[1], os.path.split(args[0])[1]))
+            else:
+                os.replace(args[0], args[1])
+        except IsADirectoryError:
+            print("You are trying to move directory!")
+        except FileNotFoundError:
+            print("File does not exist")

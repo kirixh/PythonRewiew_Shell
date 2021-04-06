@@ -1,9 +1,9 @@
 import os
 
-from abstract_commands import Commands
+from abstract_commands import Command
 
 
-class Ls(Commands):
+class Ls(Command):
     def __init__(self):
         super().__init__()
 

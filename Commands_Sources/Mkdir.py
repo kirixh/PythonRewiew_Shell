@@ -1,9 +1,9 @@
 import os
 
-from abstract_commands import Commands
+from abstract_commands import Command
 
 
-class Mkdir(Commands):
+class Mkdir(Command):
     def __init__(self):
         super().__init__()
 
@@ -13,5 +13,7 @@ class Mkdir(Commands):
         :param args: кортеж, args[0] - имя директории.
         """
         self.get_path()  # обновляем текущий путь
-        if not os.path.isdir(args[0]):  # если такой не было
+        try:
             os.mkdir(args[0])
+        except FileExistsError:
+            print("Directory already exists!")

@@ -3,7 +3,7 @@ import os
 from abc import ABC, abstractmethod
 
 
-class Commands(ABC):
+class Command(ABC):
     def __init__(self):
         """
         self.path: поле, в котором содержится путь до текущей директории
@@ -20,5 +20,3 @@ class Commands(ABC):
     @abstractmethod
     def command(self, *args):
         pass
-
-

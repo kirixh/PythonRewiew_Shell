@@ -1,9 +1,9 @@
 import os
 
-from abstract_commands import Commands
+from abstract_commands import Command
 
 
-class Rmdir(Commands):
+class Rmdir(Command):
     def __init__(self):
         super().__init__()
 
@@ -13,4 +13,9 @@ class Rmdir(Commands):
         :param args: кортеж, args[0] - путь к директории.
         """
         self.get_path()  # обновляем текущий путь
-        os.rmdir(args[0])
+        try:
+            os.rmdir(args[0])
+        except NotADirectoryError:
+            print("It's not a directory!")
+        except FileNotFoundError:
+            print("Directory not found!")
