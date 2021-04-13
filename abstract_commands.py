@@ -16,6 +16,7 @@ class Command(ABC):
         мог измениться во время выполнения других команд.
         """
         self.path = os.getcwd()
+        return self.path
 
     @abstractmethod
     def command(self, *args):

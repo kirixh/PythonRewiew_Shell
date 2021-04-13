@@ -17,3 +17,6 @@ class Rm(Command):
             os.remove(args[0])
         except FileNotFoundError:
             print("File not found!")
+        except IsADirectoryError:
+            print("You are trying to remove directory! "
+                  "Use rmdir instead")

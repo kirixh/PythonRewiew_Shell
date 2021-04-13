@@ -22,7 +22,5 @@ class Mv(Command):
                 os.replace(args[0], os.path.join(args[1], os.path.split(args[0])[1]))
             else:
                 os.replace(args[0], args[1])
-        except IsADirectoryError:
-            print("You are trying to move directory!")
         except FileNotFoundError:
             print("File does not exist")
