@@ -20,5 +20,3 @@ class Cp(Command):
             copy(os.path.abspath(args[0]), os.path.abspath(args[1]))
         except FileNotFoundError:
             print("File not found!")
-        except IsADirectoryError:
-            print("You are trying to copy directory!")

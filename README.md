@@ -2,11 +2,11 @@
 
 ### **Possible commands:**
 
-`ls` - Output a list of files and directories for the current directory.
+`ls` - Output a list of files and directories for the current directory and return the list.
 
-`pwd` - Print the full path for the current directory.
+`pwd` - Print the full path for the current directory and return path.
 
-`cd [path]` - Change current directory by a relative or absolute path.
+`cd [path]` - Change current directory by a relative or absolute path and return new path.
 
 `cp [filename1] [filename2]` - Copy [filename1] into [filename2]. Files with the same name are overwritten.
 
@@ -37,3 +37,6 @@ If the path to the directory is specified as [filename2], the name of the moved 
 1) Open or create a project
 2) run in Terminal: `git clone https://github.com/kirixh/PythonRewiew_Shell.git -b dev`
 3) Open main.py -> click RMB -> Run 'main'
+
+### Project has unittest system:
+To run tests: Open tests.py -> click RMB -> Run 'tests'

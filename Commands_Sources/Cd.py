@@ -9,7 +9,7 @@ class Cd(Command):
 
     def command(self, *args):
         """
-        Меняет текущую директорию на args[0]
+        Меняет текущую директорию на args[0] и возвращает текущий путь.
         :param args: кортеж, args[0] - новый адрес.
         """
         try:
@@ -18,4 +18,4 @@ class Cd(Command):
             print("Wrong path!")
         except NotADirectoryError:
             print("It's not a directory!")
-        self.get_path()  # обновляем текущий путь
+        return self.get_path()  # обновляем и возвращаем текущий путь

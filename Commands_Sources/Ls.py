@@ -9,8 +9,10 @@ class Ls(Command):
 
     def command(self):
         """
-        Вывод в столбик имена всех файлов и директорий для текущей директории.
+        Вывод в столбик имена всех файлов и директорий для текущей директории и возвращает список имён.
         """
         self.get_path()  # обновляем текущий путь
-        for name in os.listdir(self.path):
+        array = os.listdir(self.path)
+        for name in array:
             print(name, end='\n')
+        return array  # возвращаем список файлов
