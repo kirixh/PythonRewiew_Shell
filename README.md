@@ -38,5 +38,5 @@ If the path to the directory is specified as [filename2], the name of the moved 
 2) run in Terminal: `git clone https://github.com/kirixh/PythonRewiew_Shell.git -b dev`
 3) Open main.py -> click RMB -> Run 'main'
 
-### Project has unittest system:
+### **Project has unittest system:**
 To run tests: Open tests.py -> click RMB -> Run 'tests'
